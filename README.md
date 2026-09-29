@@ -5,8 +5,8 @@ Static GOAL reporting site for Brown Family Agency, deployed on Vercel from this
 | File | URL | Page |
 | --- | --- | --- |
 | `public/index.html` | `/` | Report hub |
-| `public/reports/ga-home-campaign-configuration-2026-09-25.html` | `/reports/ga-home-campaign-configuration-2026-09-25` | GA Home configuration |
-| `public/reports/ga-auto-campaign-configuration-2026-09-25.html` | `/reports/ga-auto-campaign-configuration-2026-09-25` | GA Auto configuration |
+| `public/reports/ga-home-campaign-configuration-2026-09-29.html` | `/reports/ga-home-campaign-configuration-2026-09-29` | GA Home configuration |
+| `public/reports/ga-auto-campaign-configuration-2026-09-29.html` | `/reports/ga-auto-campaign-configuration-2026-09-29` | GA Auto configuration |
 | `public/reports/ga-home-value-targeting-research-2026-09-25.html` | `/reports/ga-home-value-targeting-research-2026-09-25` | GA Home value targeting research |
 | `public/data/ga-zip-home-value-density-2026-09-25.csv` | `/data/ga-zip-home-value-density-2026-09-25.csv` | ZIP-level research data (download) |
 | `public/data/ga-county-home-value-density-2026-09-25.csv` | `/data/ga-county-home-value-density-2026-09-25.csv` | County-level research data (download) |

@@ -1,3 +1,9 @@
 .DS_Store
 .vercel
 node_modules
+
+# GOAL exports: internal data, never publish
+public/data/campaign-performance-*.csv
+public/data/source-settings-*.csv
+public/data/right-pricing-*.csv
+public/data/*InboundCallSignal*.csv

@@ -13,6 +13,10 @@ Static GOAL reporting site for Brown Family Agency, deployed on Vercel from this
 
 Everything under `public/` is served. `vercel.json` pins the output directory to `public`, enables clean URLs, and sends `noindex` headers. There is no build step: Framework Preset **Other**, no build or install command.
 
-County maps for the configuration reports live in `public/assets/` and load as `<img>`. The research report inlines its two choropleth SVGs (county and ZIP) so each area carries a hover tooltip with its figures. Each report links back to the hub with the "All Reports" button in its sidebar.
+## Design
+
+Every page uses the GOAL Structured Dashboard (v2) design: Sora headings and numbers, Outfit text, and color tokens in CSS variables. Pages open in the viewer's system light or dark mode. The round toggle in the top-right corner overrides it and saves the choice under the `goal-theme` key, which all pages on the site share. Print is always light and hides the toggle. Colors in page bodies come from the tokens (`var(--brand)`, `var(--map-1)` and so on), never from hex values, so they switch with the theme.
+
+Each page is self-contained: both GOAL wordmarks (black for light mode, white for dark) are inlined as base64. Maps are inline SVGs styled by the theme tokens: the county map in each configuration report, and the county and ZIP choropleths in the research report, where each area has a hover tooltip with its figures. Each report links back to the hub with the "All Reports" button in its sidebar and lists its related reports below the section nav.
 
 Research data sources: ACS 2020-2024 5-year (B25075, B25077, B25003, B25036), Zillow ZHVI August 2026, Census 2020 ZCTA-county relationship file, Census cartographic boundary files.

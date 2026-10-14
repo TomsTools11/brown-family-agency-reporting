@@ -908,6 +908,8 @@ body{margin:0;}
 .mbtn:focus-visible{outline:2px solid var(--brand-text);outline-offset:2px;}
 #zipmap{height:640px;width:100%;background:var(--surface-raised);}
 .mfallback{padding:24px;font-size:14px;color:var(--ink-muted);}
+.mhint{font-size:13px;color:var(--ink-soft);line-height:1.5;padding:10px 16px;background:var(--brand-tint);border-bottom:1px solid var(--border-subtle);}
+.mhint b{color:var(--brand-text);font-weight:600;}
 .mnote{font-size:13px;color:var(--ink-muted);line-height:1.6;padding:14px 16px;border-top:1px solid var(--border-subtle);}
 .mnote b{color:var(--ink);font-weight:600;}
 .g .leaflet-container{font-family:'Outfit',system-ui,sans-serif;background:var(--surface-raised);}
@@ -961,7 +963,7 @@ details.more .panel{border-radius:0 0 12px 12px;}
 @media (max-width:560px){ .dstep .lab{width:92px;font-size:13px;} .dkey{margin-left:0;} .dstep .dn{width:64px;} #zipmap{height:420px;} }
 @media print{
   #zipmap{height:560px;}
-  .mbtns,.leaflet-control-zoom{display:none !important;}
+  .mbtns,.mhint,.leaflet-control-zoom{display:none !important;}
   .mpanel,.dstep{break-inside:avoid;}
   .zscroll{max-height:none;overflow:visible;}
   .ztable thead th{position:static;}
@@ -1036,19 +1038,20 @@ details.more .panel{border-radius:0 0 12px 12px;}
       <div class="bhead"><span class="ix">02</span><div><h2>Expansion Map</h2><p>Current list, Wave 1 and Wave 2 ZIPs</p></div></div>
       <div class="mpanel">
         <div class="mbar" role="group" aria-label="Map layers">
-          <label class="mchip"><input type="checkbox" data-layer="cur" checked><span class="sw" style="background:var(--s2)"></span>Current list <b>48</b></label>
-          <label class="mchip"><input type="checkbox" data-layer="w1" checked><span class="sw" style="background:var(--s4)"></span>Wave 1 <b>52</b></label>
-          <label class="mchip"><input type="checkbox" data-layer="w2" checked><span class="sw" style="background:var(--s3)"></span>Wave 2 <b>73</b></label>
-          <label class="mchip"><input type="checkbox" data-layer="prof" checked><span class="sw ol"></span>Highest-closing ZIPs <b>8</b></label>
-          <label class="mchip"><input type="checkbox" data-layer="rings" checked><span class="sw ring"></span>Distance rings</label>
+          <label class="mchip" title="Click to show or hide"><input type="checkbox" data-layer="cur" checked><span class="sw" style="background:var(--s2)"></span>Current list <b>48</b></label>
+          <label class="mchip" title="Click to show or hide"><input type="checkbox" data-layer="w1" checked><span class="sw" style="background:var(--s4)"></span>Wave 1 <b>52</b></label>
+          <label class="mchip" title="Click to show or hide"><input type="checkbox" data-layer="w2" checked><span class="sw" style="background:var(--s3)"></span>Wave 2 <b>73</b></label>
+          <label class="mchip" title="Click to show or hide"><input type="checkbox" data-layer="prof" checked><span class="sw ol"></span>Highest-closing ZIPs <b>8</b></label>
+          <label class="mchip" title="Click to show or hide"><input type="checkbox" data-layer="rings" checked><span class="sw ring"></span>Distance rings</label>
           <div class="mbtns">
             <button class="mbtn" type="button" data-act="all">All ZIPs</button>
             <button class="mbtn" type="button" data-act="w1">Wave 1</button>
             <button class="mbtn" type="button" data-act="office">Hampton area</button>
           </div>
         </div>
+        <div class="mhint"><b>Click a layer above</b> to show or hide it on the map. <b>Hover over or tap any ZIP</b> to see its details.</div>
         <div id="zipmap" role="region" aria-label="Map of current and recommended Georgia ZIPs around the Hampton office"></div>
-        <div class="mnote">Hover or tap a ZIP for its households, distance and home values. Select any ZIP in the tables below to find it on the map. Rings are measured from the Hampton office: <b>25 mi</b> and <b>57.3 mi</b> (Bowdon 30108, the farthest current ZIP).</div>
+        <div class="mnote">Select any ZIP in the tables below to find it on the map. Rings are measured from the Hampton office: <b>25 mi</b> and <b>57.3 mi</b> (Bowdon 30108, the farthest current ZIP).</div>
       </div>
     </section>
 
